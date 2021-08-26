@@ -1,11 +1,11 @@
 const { GraphQLSchema, GraphQLObjectType } = require('graphql');
-const { addList } = require('./mutations/todolist');
+const { addList, deleteList } = require('./mutations/todolist');
 const { getAllList } = require('./queries/todolist');
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: () => ({
-    addList,
+    addList, deleteList,
   }),
 });
 

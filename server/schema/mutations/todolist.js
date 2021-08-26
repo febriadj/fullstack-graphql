@@ -2,6 +2,7 @@ const {
   GraphQLNonNull,
   GraphQLString,
   GraphQLBoolean,
+  GraphQLID,
 } = require('graphql');
 
 const ListType = require('../types/todolist');
@@ -18,5 +19,15 @@ exports.addList = {
 
     const todolist = new Todolist({ title, done });
     return todolist.save();
+  },
+}
+
+exports.deleteList = {
+  type: ListType,
+  args: {
+    id: { type: new GraphQLNonNull(GraphQLID) },
+  },
+  resolve(parent, args) {
+    return Todolist.findOneAndDelete({ _id: args.id });
   },
 }
