@@ -1,1 +1,1 @@
-## Fullstack GraphQL
+## MERN App + GraphQL
