@@ -16,8 +16,9 @@ exports.addList = {
   },
   resolve(parent, args) {
     const { title, done } = args;
+    const time = new Date();
 
-    const todolist = new Todolist({ title, done });
+    const todolist = new Todolist({ title, done, time });
     return todolist.save();
   },
 }

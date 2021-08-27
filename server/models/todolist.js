@@ -7,7 +7,7 @@ const TodolistSchema = new Schema({
     default: false,
   },
   time: {
-    type: Schema.Types.Date,
+    type: Schema.Types.String,
     default: new Date(),
   },
 });
