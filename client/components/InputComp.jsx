@@ -14,13 +14,13 @@ function InputComp({
           className="inputTag"
           onChange={handleChange}
           value={inputValue}
+          placeholder="Apa yang akan kamu lakukan hari ini?"
         />
         <button
           type="submit"
-          className="inputBtn"
+          className="fas fa-paper-plane inputBtn"
           onClick={handleClickBtn}
         >
-          Submit
         </button>
       </div>
     </div>

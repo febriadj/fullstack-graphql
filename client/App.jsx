@@ -24,13 +24,12 @@ function App() {
         }
       }
     `
-
     try {
       const req = await GqlClient.request(query);
       setTodoList(req.getAllList);
     }
     catch (err) {
-      console.error(err, undefined, 2);
+      console.error(JSON.stringify(err, undefined, 2));
       process.exit(1);
     }
   }
@@ -66,6 +65,26 @@ function App() {
 
   const handleClickBtn = () => handleSubmit();
 
+  async function handleDeleteBtn(event) {
+    const mutation = gql`
+      mutation {
+        deleteList(id: "${event.target.value}") {
+          id
+        }
+      }
+    `
+    try {
+      const req = await GqlClient.request(mutation);
+      console.log(req.deleteList);
+
+      getList();
+    }
+    catch (err) {
+      console.error(JSON.stringify(err, undefined, 2));
+      process.exit(1);
+    }
+  }
+
   useEffect(() => {
     document.title = 'Fullstack GraphQL';
     getList();
@@ -89,6 +108,7 @@ function App() {
                   <ListComp
                     key={item.id}
                     list={item}
+                    handleDeleteBtn={(event) => handleDeleteBtn(event)}
                   />
                 )
               })
