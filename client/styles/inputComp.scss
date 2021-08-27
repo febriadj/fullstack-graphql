@@ -1,0 +1,20 @@
+.inputComp {
+  background-color: #f0f0f0;
+  padding: 20px;
+  .inputTag {
+    width: 300px;
+    padding: 20px 0;
+    border: none; outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #414141;
+    border-radius: 0;
+  }
+  .inputBtn {
+    border: 1px solid #313131;
+    outline: none;
+    background-color: transparent;
+    padding: 20px;
+    margin: 0 0 0 20px;
+    border-radius: 0;
+  }
+}

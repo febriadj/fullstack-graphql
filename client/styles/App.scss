@@ -1,3 +1,13 @@
-body {
-  background-color: #121212;
+.app {
+  width: 100%;
+  display: flex; justify-content: center;
+  .appWrap {
+    margin: 40px 0;
+    .main {
+      @import 'inputComp.scss';
+      @import 'listComp.scss';
+      
+      padding: 10px;
+    }
+  }
 }

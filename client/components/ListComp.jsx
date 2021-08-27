@@ -1,15 +1,15 @@
 import React from 'react';
 
-function ListComp() {
+function ListComp({ list }) {
   return (
     <div className="list">
       <div className="listData">
-        <h2 className="title">Belajar GraphQL</h2>
-        <p className="time">12 menit yang lalu</p>
+        <h2 className="title">{list.title}</h2>
+        <p className="time">{list.time}</p>
       </div>
       <div className="listAction">
-        <button type="submit" className="doneListBtn">Selesai</button>
-        <button type="submit" className="deleteListBtn">Hapus</button>
+        <button type="submit" className="fas fa-pen listBtn doneListBtn"></button>
+        <button type="submit" className="fas fa-trash listBtn deleteListBtn"></button>
       </div>
     </div>
   )
