@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;800&display=swap');
+
+$font: 'Kaisei Tokumin', serif;
+
+body {
+  font-family: $font;
+  background-color: #141014;
+  color: #fff;
+  font-size: 15px;
+}
+
+button, input {
+  font-family: $font;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 10px #141014;
+}
+
 .app {
   width: 100%;
   display: flex; justify-content: center;
@@ -7,6 +30,7 @@
       @import 'inputComp.scss';
       @import 'listComp.scss';
       
+      width: 500px;
       padding: 10px;
     }
   }

@@ -1,20 +1,22 @@
 .inputComp {
-  background-color: #f0f0f0;
-  padding: 20px;
-  .inputTag {
-    width: 300px;
-    padding: 20px 0;
-    border: none; outline: none;
-    background-color: transparent;
-    border-bottom: 1px solid #414141;
-    border-radius: 0;
-  }
-  .inputBtn {
-    border: 1px solid #313131;
-    outline: none;
-    background-color: transparent;
-    padding: 20px;
-    margin: 0 0 0 20px;
-    border-radius: 0;
+  .inputCompWrap {
+    display: grid; grid-template-columns: 1fr auto; gap: 20px;
+    .inputTag {
+      height: 70px;
+      padding: 0px 20px;
+      background-color: #251e27;
+      border-radius: 2rem;
+    }
+    .inputBtn {
+      background-color: #251e27;
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .inputTag::placeholder {
+      color: #fff;
+      opacity: 0.5;
+    }
   }
 }
